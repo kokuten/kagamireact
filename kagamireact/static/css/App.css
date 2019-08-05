@@ -1,0 +1,131 @@
+.top{
+  position: sticky;
+  top: 0;
+  width: 100vw;
+}
+.KagamiContainer {
+  flex: 1;
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: rgba(127, 127, 127, 0.3);
+}
+::-webkit-scrollbar-track:hover
+{
+	background-color: rgba(195, 195, 195, 0.3);
+}
+::-webkit-scrollbar
+{
+	width: 0.5em;
+	background-color: rgba(127, 127, 127, 0.3);
+}
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgba(0,0,0,0.3);
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.KagamiNav {
+  background-color: rgba(127, 127, 127, 0.3);
+
+  width: 100vw;
+}
+.KagamiNav li{
+  padding: 0.1em;
+  display: inline-block;
+  vertical-align: middle;
+}
+.KagamiNav img{
+  height: 1em;
+}
+.KagamiWindow{
+  height: 3.5rem;
+  background-color: rgba(63, 63, 63, 0.5);
+  background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .5) 25%, rgba(255, 255, 255, .5) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .5) 75%, rgba(255, 255, 255, .5) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .5) 25%, rgba(255, 255, 255, .5) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .5) 75%, rgba(255, 255, 255, .5) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+  animation: bg infinite 20s linear;
+  vertical-align: middle;
+}
+.KagamiWindow ul{
+  text-align: right;
+}
+.KagamiWindow li{
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+}
+.KagamiWindow .ability img{
+  width: 2rem;
+}
+.KagamiWindow .gcd img{
+  width: 3rem;
+}
+
+.container .title{
+  background-color: rgba(127, 127, 127, 0.3);
+
+  width: 100vw;
+  vertical-align: middle;
+}
+.container .title img{
+  height: 1em;
+}
+.container .title:hover{
+  background-color: rgba(195, 195, 195, 0.3);
+}
+.container .title li{
+  display: inline-block;
+}
+.container .context li{
+  display: inline-block;
+}
+.container .context .ability img{
+  width: 1.5rem;
+}
+.container .context .gcd img{
+  width: 2rem;
+}
+.releaseNote .context li{
+  display: block;
+}
+.releaseNote .context img{
+  display: none;
+}
+
+.KagamiWindow img{
+  animation: icon-pulse 1s linear;
+}
+
+@keyframes bg {
+  from{ background-position: 0 0; }
+  to{ background-position: -100vw 0; }
+}
+
+@keyframes icon-pulse {
+  0%{ transform: scale(1.20); }
+  33%{ transform: scale(1.05); }
+  100%{ transform: scale(1.00); }
+}
+@keyframes icon-move {
+ 0%{
+  transform: translateX(0);
+  opacity: 1;
+ }
+ 100%{
+  transform: translateX(-100vw);
+  opacity: 1;
+ }
+}

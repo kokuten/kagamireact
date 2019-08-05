@@ -1,0 +1,29 @@
+var map = {
+	"./MarketLimit.svg": 2089,
+	"./NaviBottom.svg": 2090,
+	"./NaviUp.svg": 2091,
+	"./NavigationClose.svg": 2092,
+	"./RoundArrowRight.svg": 2093,
+	"./TrashCan.svg": 2094,
+	"./ViewRefresh.svg": 2095
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 2088;
